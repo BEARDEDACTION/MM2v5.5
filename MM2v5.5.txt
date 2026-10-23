@@ -6,7 +6,7 @@ local OFFSET = 5          -- studs below the coin to travel at
 local FIRST_SPEED = 999   -- first coin of the round is a fast snap
 local MENU_KEY = 0x70     -- F1
 local HEALTH_OFFSET = 0x184 -- Humanoid health offset for memory_write (changes when Roblox updates)
-local MAX_MISSES = 2      -- failed pickups in a row before the character resets (the ONLY reset trigger)
+local MAX_MISSES = 3      -- failed pickups in a row before the character resets (the ONLY reset trigger)
 
 -- Position-based death detection (for Infection and any mode where "Alive" is unreliable).
 -- If our character ends up more than this many studs from where we last put it, we were
