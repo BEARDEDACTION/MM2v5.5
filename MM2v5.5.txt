@@ -652,9 +652,11 @@ local function menuStep()
  
     if active then
         for _, hk in ipairs(hotkeys) do
-            local pressed = iskeypressed(hk[1]) and true or false
-            if pressed and not wasKey[hk[1]] then hk[2]() end
-            wasKey[hk[1]] = pressed
+            local keyCode = hk[1]
+            local action = hk[2]
+            local pressed = iskeypressed(keyCode) and true or false
+            if pressed and not wasKey[keyCode] then action() end
+            wasKey[keyCode] = pressed
         end
     end
  
